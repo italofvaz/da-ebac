@@ -140,14 +140,20 @@ grafico.set(title='Gasolina', xlabel='dias', ylabel='preco');
 Utilizando os comandos do `git`, adicione e "commite" os arquivos gerados (base, código Python e gráfico).
 """
 
-# comandos git para adicionar e commitar os arquivos
+!git status
+
+!git add .
+
+!git commit -m "ätualizacao do codigo"
+!git status
 
 """### **2.3. Github**
 
 Utilizando os comandos do `git`, envie o seu commit para o GitHub.
 """
 
-# comandos git para enviar o commit para o GitHub
+!git push origin main
+!git status
 
 """---
 
@@ -160,21 +166,28 @@ O arquivo README.md é a porta de entrada do seu projeto, é ele que será rende
  - [Spark Cluster on Docker](https://github.com/cluster-apps-on-docker/spark-standalone-cluster-on-docker), esse projeto é meu! :)
 
 ### **3.1. Desenvolvimento**
+"""
 
-Altere o arquivo README.md com informações sobre seu repositório, inclua um título e uma breve descrição do repositório (no mínimo).
+!cat /content/sample_data/README.md
+
+
+
+
+
+file_path = '/content/da-ebac/README.md'
+
+with open(file_path, 'w') as f:
+    f.write(" # Análise de Preços da Gasolina\n\nEste repositório contém um script Python para gerar gráficos de linhas mostrando a evolução do preço da gasolina com base em dados de um arquivo CSV. \n\n ## Conteúdo \n\n - **gasolina.py**: Script Python para análise e geração do gráfico. \n\n - **gasolina.csv**: Dados de entrada com datas e preços. \n\n - **gasolina.png**: Gráfico gerado pelo script.")
+
+!git add .
+!git status
+
+!git commit -m "arquivo README atualiza"
+
+!git push origin main
+!git status
+
+"""Altere o arquivo README.md com informações sobre seu repositório, inclua um título e uma breve descrição do repositório (no mínimo).
 
 > **Dica**: o README.md pode ser configurado utilizando o padrão **markdown**, o mesmo que utilizamos nas células de texto aqui no Google Colab.
-
-### **3.2. Git**
-
-Utilizando os comandos do `git`, adicione e "commite" as alterações no arquivo `README.md`.
 """
-
-# comandos git para adicionar e commitar os arquivos
-
-"""### **3.3. Github**
-
-Utilizando os comandos do `git`, envie o seu commit para o GitHub.
-"""
-
-# comandos git para enviar o commit para o GitHub
